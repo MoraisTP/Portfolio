@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Morais Pedro</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      // Fonction pour basculer entre le mode sombre et clair
+      function toggleDarkMode() {
+        const body = document.body;
+        const toggleButton = document.getElementById("dark-mode-toggle");
+
+        // Basculer la classe dark-mode
+        body.classList.toggle("dark-mode");
+
+        // Vérifie si Dark ou si Light
+        if (body.classList.contains("dark-mode")) {
+          toggleButton.textContent = "Light Mode";
+        } else {
+          toggleButton.textContent = "Dark Mode";
+        }
+      }
+
+      // Mode dark en premier chargement
+      window.onload = function () {
+        const body = document.body;
+        const toggleButton = document.getElementById("dark-mode-toggle");
+
+        // Activer directement le mode sombre au chargement
+        body.classList.add("dark-mode");
+        toggleButton.textContent = "Light Mode";
+      };
+    </script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home">Accueil</a></li>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="dark-mode-toggle" onclick="toggleDarkMode()">
+        Light Mode
+      </button>
+    </nav>
+
+    <!-- Section Accueil -->
+    <section id="home" class="hero-section">
+      <h1>BONJOUR! I'm Pedro MORAIS</h1>
+      <p><span class="typed-text"></span></p>
+      <div class="lightning-border">
+        <img src="../img/pp1-2.png" alt="Photo de profil" class="hero-image" />
+      </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="about" class="about-section">
+      <h2>Laissez-moi vous parler un peu de moi, je suis...</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet recusandae
+        magni deleniti obcaecati deserunt maiores asperiores beatae ullam
+        veritatis expedita aliquam vero, voluptate illo dolorum quas dolore
+        tempora? Qui, ipsa?
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia
+        odio vitae vestibulum. Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Praesentium inventore debitis harum fugiat nobis
+        excepturi eveniet alias tempore blanditiis explicabo ratione, ullam
+        impedit libero distinctio fugit magnam est facere id!
+      </p>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="skills">
+      <h2>Compétences</h2>
+      <ul>
+        <li>HTML/CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>API REST</li>
+        <li>SQL</li>
+      </ul>
+    </section>
+
+    <!-- Section Projets -->
+    <section id="projects">
+      <h2>Projets</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>Projet 1</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <a href="#" target="_blank">Voir le projet</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact-section">
+      <h2>Contact</h2>
+      <p>
+        Email:
+        <a href="mailto:morais.pedro@outlook.fr">morais.pedro@outlook.fr</a>
+      </p>
+      <p>Téléphone: <a href="tel:+33779562797">0779562797</a></p>
+      <button class="download-cv">Télécharger CV</button>
+    </section>
+
+    <script>
+      // Effet d'écriture
+      var typed = new Typed(".typed-text", {
+        strings: [
+          "Étudiant Développeur",
+          "Passionné par l'IA",
+          "Fan de jeux vidéo",
+        ],
+        typeSpeed: 50,
+        backSpeed: 50,
+        loop: true,
+      });
+
+      // Dark mode
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,215 @@
+/* Style de base */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+  scroll-behavior: smooth;
+}
+
+/* Mode sombre */
+.dark-mode {
+  background-color: #1f1e2e;
+  color: #f5f5f5;
+}
+
+/* Navbar */
+.dark-mode .navbar {
+  background-color: #2a2a40;
+}
+
+/* Liens du menu dans le mode sombre */
+.dark-mode .navbar ul li a {
+  color: #f5f5f5;
+}
+
+/* Effet de texte */
+.dark-mode .typed-text {
+  color: #8a6df1;
+}
+
+/* Bouton Dark Mode */
+.dark-mode #dark-mode-toggle {
+  background-color: #8a6df1;
+}
+
+/* CANCEL Anim????Hero section dans le mode sombre */
+/* .dark-mode .hero-section {
+  background-color: #2e2d3f;
+} */
+
+/* Section À propos et autres dans le mode sombre */
+.dark-mode .about-section,
+.dark-mode .skills-section,
+.dark-mode .projects-section,
+.dark-mode .contact-section {
+  background-color: #2a2a40;
+}
+
+/* Projets dans le mode sombre */
+.dark-mode .project-card {
+  background-color: #393850;
+}
+
+/* Bouton télécharger CV dans le mode sombre */
+.dark-mode .download-cv {
+  background-color: #8a6df1;
+}
+
+.navbar {
+  background-color: #ffffff;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li {
+  margin: 0 1rem;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+}
+
+/* Bouton Light Mode */
+#dark-mode-toggle {
+  background-color: #c993ff;
+  border: none;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+#dark-mode-toggle:hover {
+  transform: scale(1.2);
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+/* Section MOI */
+.hero-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  color: #5d3fd3;
+}
+
+.typed-text {
+  font-size: 1.5rem;
+  color: #c993ff;
+}
+
+/* Effets sur ma photo */
+.hero-image {
+  margin-top: 2rem;
+  border-radius: 100%;
+  width: 100%;
+}
+
+.lightning-border {
+  width: 300px;
+  height: 300px;
+  position: relative;
+  border-radius: 100%;
+}
+
+.lightning-border::before,
+.lightning-border::after {
+  content: "";
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #00f0f0,
+    #00ff00,
+    #0000ff,
+    #ff0000,
+    #00f0f0,
+    #00ff00,
+    #0000ff,
+    #f00f0f
+  );
+  width: 300px;
+  height: 385px;
+  transform: scale(1.02);
+  z-index: -1;
+  background-size: 500%;
+  animation: animate 20s infinite;
+  border-radius: 100%;
+}
+
+.lightning-border::after {
+  filter: blur(20px);
+}
+/* Animation */
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 300% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.about-section,
+.contact-section,
+.skills-section,
+.projects-section {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #5d3fd3;
+}
+/* Section projets (je vais peut-être faire une anim en JS) */
+.project-grid {
+  display: flex;
+  justify-content: space-around;
+}
+
+.project-card {
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 200px;
+}
+/* Bouton CV (Section contact à refaire) */
+.download-cv {
+  background-color: #c993ff;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
