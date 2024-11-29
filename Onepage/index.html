@@ -9,34 +9,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <script>
-      // Fonction pour basculer entre le mode sombre et clair
-      function toggleDarkMode() {
-        const body = document.body;
-        const toggleButton = document.getElementById("dark-mode-toggle");
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 
-        // Basculer la classe dark-mode
-        body.classList.toggle("dark-mode");
-
-        // Vérifie si Dark ou si Light
-        if (body.classList.contains("dark-mode")) {
-          toggleButton.textContent = "Light Mode";
-        } else {
-          toggleButton.textContent = "Dark Mode";
-        }
-      }
-
-      // Mode dark en premier chargement
-      window.onload = function () {
-        const body = document.body;
-        const toggleButton = document.getElementById("dark-mode-toggle");
-
-        // Activer directement le mode sombre au chargement
-        body.classList.add("dark-mode");
-        toggleButton.textContent = "Light Mode";
-      };
-    </script>
   </head>
   <body>
     <!-- Navbar -->
@@ -114,7 +88,34 @@
       <p>Téléphone: <a href="tel:+33779562797">0779562797</a></p>
       <button class="download-cv">Télécharger CV</button>
     </section>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      // Fonction pour basculer entre le mode sombre et clair
+      function toggleDarkMode() {
+        const body = document.body;
+        const toggleButton = document.getElementById("dark-mode-toggle");
 
+        // Basculer la classe dark-mode
+        body.classList.toggle("dark-mode");
+
+        // Vérifie si Dark ou si Light
+        if (body.classList.contains("dark-mode")) {
+          toggleButton.textContent = "Light Mode";
+        } else {
+          toggleButton.textContent = "Dark Mode";
+        }
+      }
+
+      // Mode dark en premier chargement
+      window.onload = function () {
+        const body = document.body;
+        const toggleButton = document.getElementById("dark-mode-toggle");
+
+        // Activer directement le mode sombre au chargement
+        body.classList.add("dark-mode");
+        toggleButton.textContent = "Light Mode";
+      };
+    </script>
     <script>
       // Effet d'écriture
       var typed = new Typed(".typed-text", {

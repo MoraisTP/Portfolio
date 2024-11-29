@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Parkinsans:wght@300..800&display=swap');
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.logo-navbar {
+    width: 4rem;
+}
+
+.navbar-color {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(320deg, rgba(2, 0, 36, 1) 0%, rgba(184, 0, 0, 1) 52%);
+}
+
+.width80 p {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.carousel-control-prev {
+    left: 20px !important;
+}
+
+.carousel-control-next {
+    right: 20px !important;
+}
+
+
+.bg-horror {
+    background-image: url(../img/bg-blur-fixe-horreur.jpg);
+    width: 100%;
+}
+
+h1 {
+    font-size: 5rem;
+    color: #B80000;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+h2 {
+    color: #B80000;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 4rem;
+}
+
+p {
+    font-family: "Parkinsans", sans-serif;
+}
+
+.taille-icon {
+    font-size: 5rem;
+    margin: 5px 20px 10px 20px
+}
+
+
+.texte-gras {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #B80000;
+}
+
+/*Prix abonnement*/
+
+.pricing-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    border-radius: 15px;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-list li {
+    margin-bottom: 0.8rem;
+    color: #6c757d;
+}
+
+.list-non li{
+    list-style: none;
+}
+
+.genres-hover a:hover {
+    color: #B80000!important;
+}
+
+.bordure {
+    background-color: #312c2c;
+    padding: 50px;
+}
+
+.reseaux-hover i:hover  {color: #B80000;}
+
+.popular-badge {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    border-radius: 20px;
+}
+
+.gradient-custom {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+}
+
+.abonnement-taille {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hover-bouton {
+    transition: 0.2s ease-out 0.3s;
+}
+
+.hover-bouton:hover {
+    transform: scale(1.2);
+    transition: ease-out 0.3s;
+    border: #B80000 solid 3px;
+}
+
+/*Fin prix abonnement*/
+
+/* débutCatégories */
+/* Cards Background Images */
+.bg-romance {
+    background-image: url('../img/genres-romance.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+}
+
+.bg-action {
+    background-image: url('../img/genres-raiden.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+}
+
+.bg-fantastique {
+    background-image: url('../img/genres-fantastique.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+}
+
+.bg-comedie {
+    background-image: url('../img/genres-comedie.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+}
+
+.bg-science {
+    background-image: url('../img/genres-sci.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+}
+
+.romance p, .anime p, .comedie p, .fantastique p, .science-fiction p {
+    color: #FFFFFF;
+    text-shadow: #FFF 0 0 5px, #FFF 0 0 10px, #FFF 0 0 15px, #FF2D95 0 0 20px, #FF2D95 0 0 30px, #FF2D95 0 0 40px, #FF2D95 0 0 50px, #FF2D95 0 0 75px;
+}
+.romance h3, .anime h3, .comedie h3, .fantastique h3, .science-fiction h3 {
+    color: #FFFFFF;
+    text-shadow: #FFF 0 0 5px, #FFF 0 0 10px, #FFF 0 0 15px, #FF2D95 0 0 20px, #FF2D95 0 0 30px, #FF2D95 0 0 40px, #FF2D95 0 0 50px, #FF2D95 0 0 75px;
+}
+
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 1.5rem;
+}
+
+.display-none {
+    display: none;
+}
+
+.btn-danger {
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+#genresMenu {
+    display: none;
+}
+
+
+/*fin Catégories */
+/*début testimoniaux*/
+.testimoniaux p {
+    color: #000000;
+}
+
+.testimoniaux h5 {
+    color: #000000;
+}
+
+.testimonial-card {
+    background: linear-gradient(145deg, #f3f4f6, #ffffff);
+    border-radius: 20px;
+    box-shadow: 8px 8px 16px #d1d9e6, -8px -8px 16px #ffffff;
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.quote-icon {
+    font-size: 4rem;
+    color: #6366f1;
+    opacity: 0.2;
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 40px;
+    height: 40px;
+    background-color: #6366f1;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel-control-prev {
+    left: -20px;
+}
+
+.carousel-control-next {
+    right: -20px;
+}
+
+.carousel-indicators {
+    bottom: -50px;
+}
+
+.carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #6366f1;
+    opacity: 0.5;
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+}
+
+
+
+/*début testimonial*/
+
+/*début benefits*/
+.benefits p, .benefits h3, .benefits i{
+    margin: 20px;
+
+}
+
+.benefits i {
+    font-size: 4rem;
+}
+
+.benefits-bg {
+    background-color: #000040;
+    border-radius: 30px;
+    border: 5px solid #b800ff;
+}
+
+/*fin bénefs */
+/*début section article*/
+.section-article {
+    color: #B80000;
+}
+.bg-articles {background-color: black; border-radius: 30px; padding: 30px;}
+/*fin section articles*/
+
+
+@media (max-width: 575.98px) {
+    .taille-icon {
+        font-size: 2rem;
+    }
+
+    .display-none {
+        display: block
+    }
+
+    .width80 p {
+        font-size: 1.2rem;
+        margin-bottom: 5rem
+    }
+
+    .bouton-principal {
+        margin-bottom: 20px
+    }
+
+    .margin-mobile {
+        margin-top: 10rem
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .width100 p, .width100 h5 {
+        display: none;
+    }
+
+    .pricing-taille {
+        margin: 10px
+    }
+
+    h3 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+}
+
+/*footer*/
+@media (max-width: 464px) {
+    .margin-mobile {
+        margin-top: 70vh;
+    }
+    h1 {font-size: 2rem}
+
+}
+
+@media (max-width: 768px) {
+    .taille-icon {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .pricing-taille {
+        margin: 10px
+    }
+}
+
+@media (max-width: 1199.98px) {
+
+}
+
+@media (max-width: 1399.98px) {
+
+}
+
+@media (min-width: 768px) {
+    #genresMenu {
+        display: flex !important;
+
+    }
+}
