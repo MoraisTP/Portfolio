@@ -1,21 +1,43 @@
-/* Style de base */
+:root {
+  /* Couleurs principales Raiden */
+  --primary-violet: #6f1f8e; /* Violet intense (de la robe) */
+  --primary-blue: #3a0ca3; /* Bleu foncé (élément électro) */
+  --primary-pink: #a04bb4; /* Rose lumineux (ses accessoires) */
+
+  /* Couleurs complémentaires */
+  --complementary-yellow: #f7d860; /* Jaune pâle (complément du violet) */
+  --complementary-gold: #ffbe0b; /* Or (complément du bleu) */
+  --complementary-orange: #fca311; /* Orange (complément du rose) */
+
+  /* Couleurs neutres */
+  --bg-black: #1f1f1f; /* Noir pour le contraste */
+  --bg-white: #f5f5f5; /* Blanc pour le fond */
+
+  /* Tailles des titres */
+  --h1-size: 4rem;
+  --h2-size: 2rem;
+  --h3-size: 1.5rem;
+}
+
+
 html {
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f9;
-  color: #333;
-  scroll-behavior: smooth;
+  background-color: var(--bg-white);
+  color: var(--bg-black);
 }
 
 /* Mode sombre */
 .dark-mode {
   background-color: #1f1e2e;
-  color: #f5f5f5;
+  color: var(--bg-white);
 }
 
 /* Navbar */
@@ -23,12 +45,12 @@ body {
   background-color: #2a2a40;
 }
 
-/* Liens du menu dans le mode sombre */
+/* Liens du menu mode sombre */
 .dark-mode .navbar ul li a {
-  color: #f5f5f5;
+  color: var(--bg-white);
 }
 
-/* Effet de texte */
+/* Effet de texte mode sombre*/
 .dark-mode .typed-text {
   color: #8a6df1;
 }
@@ -38,23 +60,51 @@ body {
   background-color: #8a6df1;
 }
 
-/* CANCEL Anim????Hero section dans le mode sombre */
-/* .dark-mode .hero-section {
-  background-color: #2e2d3f;
-} */
 
 /* Section À propos et autres dans le mode sombre */
-.dark-mode .about-section,
 .dark-mode .skills-section,
-.dark-mode .projects-section,
+.dark-mode .projects, .dark-mode .competences,
 .dark-mode .contact-section {
   background-color: #2a2a40;
 }
 
 /* Projets dans le mode sombre */
 .dark-mode .project-card {
-  background-color: #393850;
+  background-image: url("../img/horreur.jpg");
+  background-size: cover;
+  min-width: 400px;
+  min-height: 300px;
+  background-position: center;
+  background-color: var(--bg-black);
+  transition: 1s;
 }
+
+.btn-projet {
+  background-color: #8a6df1;
+  color: var(--bg-white);
+  border-radius: 10%;
+  padding: 10px;
+}
+
+.project-card h3, .project-card p, .btn-projet {
+  color: var(--bg-white);
+  display: none
+}
+
+
+.project-card:hover {
+  transition: 0.5s ease-in-out;
+  color: var(--bg-white);
+
+  scale: 1.2;
+}
+
+
+.project-card:hover p, .project-card:hover h3, .project-card:hover .btn-projet {
+  display: block
+}
+
+
 
 /* Bouton télécharger CV dans le mode sombre */
 .dark-mode .download-cv {
@@ -90,6 +140,7 @@ body {
 
 /* Bouton Light Mode */
 #dark-mode-toggle {
+  margin-right: 2rem;
   background-color: #c993ff;
   border: none;
   padding: 0.5rem 1rem;
@@ -105,7 +156,7 @@ body {
 
 /* Section MOI */
 .hero-section {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -116,6 +167,11 @@ body {
 .hero-section h1 {
   font-size: 3rem;
   color: #5d3fd3;
+  margin: 5rem 0 0 0;
+}
+
+.hero-section p {
+  margin: 0;
 }
 
 .typed-text {
@@ -132,7 +188,7 @@ body {
 
 .lightning-border {
   width: 300px;
-  height: 300px;
+  /*height: 300px;*/
   position: relative;
   border-radius: 100%;
 }
@@ -188,11 +244,14 @@ body {
   text-align: center;
 }
 
-h2 {
-  font-size: 2rem;
+
+.projects h2 {
+  font-size: 5rem;
   color: #5d3fd3;
+  text-align: center;
 }
-/* Section projets (je vais peut-être faire une anim en JS) */
+
+/*  */
 .project-grid {
   display: flex;
   justify-content: space-around;
