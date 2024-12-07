@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="fr">
   <head>
+    <!--    Metas Données-->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio - Morais Pedro</title>
+    <meta name="description"
+          content="Actuellement à la recherche d'une alternance pour 2025 (deuxième année de dev), j'aime affronter des nouveaux défis et je suis motivé à poursuivre ce rêve !">
+    <meta content="all" name="robots"/>
+<!--    Meta OG-->
+    <meta content="Recherche Alternance - Développeur Web" property="og:title"/>
+    <meta content="Actuellement à la recherche d'une alternance pour 2025, j'aime affronter des nouveaux défis et je suis motivé à poursuivre ce rêve !" property="og:description"/>
+    <meta content="https://moraistp.github.io/portfolio/" property="og:url"/>
+<!--Feuilles de style-->
     <link rel="stylesheet" href="css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
+<!--Fin des feuilles de style-->
   </head>
   <body>
     <!-- Navbar -->
@@ -92,26 +101,10 @@
         <button class="download-cv">Télécharger CV</button>
       </a>
     </section>
-    <script src="js/script.js"></script>
+<!--Fin de la section contact-->
+
+<!--    Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-    <script>
-      // Effet d'écriture
-      var typed = new Typed(".typed-text", {
-        strings: [
-          "Étudiant Développeur",
-          "Passionné par l'IA",
-          "Fan de jeux vidéo",
-        ],
-        typeSpeed: 50,
-        backSpeed: 50,
-        loop: true,
-      });
-
-      // Dark mode
-      function toggleDarkMode() {
-        document.body.classList.toggle("dark-mode");
-      }
-    </script>
+    <script src="js/script.js"></script>
   </body>
 </html>
