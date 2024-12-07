@@ -3,34 +3,115 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pedro Morais - Développeur Web</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>Portfolio - Morais Pedro</title>
+    <link rel="stylesheet" href="css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
   </head>
   <body>
     <!-- Navbar -->
     <nav class="navbar">
-      <a href="index.html">Accueil</a>
-      <a href="projets.html">Projets</a>
-      <a href="competences.html">Compétences</a>
-      <a href="contact.html">Contact</a>
+      <ul>
+        <li><a href="#home">Accueil</a></li>
+        <li><a href="#about">À propos</a></li>
+        <li><a href="#skills">Compétences</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="dark-mode-toggle" onclick="toggleDarkMode()">
+        Light Mode
+      </button>
     </nav>
 
-    <!-- Section d'Accueil -->
-    <header class="hero-section">
-      <h1>Pedro Morais</h1>
+    <!-- Section Accueil -->
+    <section id="home" class="hero-section">
+      <h1>Pedro MORAIS</h1>
+      <p>Développeur - Recherche Alternance pour 2025 </p>
+      <p><span class="typed-text"></span></p>
+      <div class="lightning-border">
+        <img src="assets/img/pp1-2.png" alt="Photo de profil" class="hero-image" />
+      </div>
+    </section>
+
+
+    <!-- Section Projets -->
+    <section id="projects" class="projects">
+      <h2>Projets</h2>
+      <div class="project-grid">
+        <div class="project-card">
+          <h3>Projet 1</h3>
+          <p>Le premier site réalisé en HTML/CSS + Bootstrap.</p>
+          <a href="#" target="_blank"><button class="btn-projet">Voir le projet</button></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section id="about" class="about-section">
+      <h2>Laissez-moi vous parler un peu de moi...</h2>
       <p>
-        Développeur Web passionné par les nouvelles technologies, l’intelligence
-        artificielle et le développement de solutions innovantes.
+        Je m'appelle Pedro, j'ai 29 ans et je suis actuellement en première année de Bachelor Développeur Web à l'école
+        Need For School. Passionné par le monde du dév, j'ai entrepris une reconversion professionnelle pour
+        transformer ma passion en métier. Etant curieux, j'apprends chaque
+        jour à maîtriser les langages de programmation et à développer des projets innovants.
       </p>
       <p>
-        Actuellement à la recherche d'une alternance pour approfondir mes
-        compétences et contribuer à des projets ambitieux.
+        Je suis à la recherche d'une alternance pour ma deuxième année, où je pourrai mettre à profit mes compétences
+        tout en continuant à apprendre au sein d'une équipe dynamique. Désireux d'apprendre et déterminé à relever de
+        nouveaux défis, je m'engage à apporter ma rigueur, ma créativité et mon enthousiasme à chaque projet que je
+        réalise.
       </p>
-      <a href="projets.html" class="cta-button">Voir mes projets</a>
-    </header>
+    </section>
+
+    <!-- Section Compétences -->
+    <section id="skills" class="competences">
+      <h2>Compétences</h2>
+      <ul>
+        <li>HTML/CSS</li>
+        <li>JavaScript</li>
+        <li>React</li>
+        <li>API REST</li>
+        <li>SQL</li>
+      </ul>
+    </section>
+
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact-section">
+      <h2>Contact</h2>
+      <p>
+        Email:
+        <a href="mailto:morais.pedro@outlook.fr">morais.pedro@outlook.fr</a>
+      </p>
+      <p>Téléphone: <a href="tel:+33779562797">0779562797</a></p>
+      <a href="./download/morais-pedro.pdf" download="morais-pedro.pdf">
+        <button class="download-cv">Télécharger CV</button>
+      </a>
+    </section>
+    <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+    <script>
+      // Effet d'écriture
+      var typed = new Typed(".typed-text", {
+        strings: [
+          "Étudiant Développeur",
+          "Passionné par l'IA",
+          "Fan de jeux vidéo",
+        ],
+        typeSpeed: 50,
+        backSpeed: 50,
+        loop: true,
+      });
+
+      // Dark mode
+      function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+      }
+    </script>
   </body>
 </html>

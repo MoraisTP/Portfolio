@@ -33,7 +33,7 @@ html, body {
 
 
 .bg-horror {
-    background-image: url(../img/bg-blur-fixe-horreur.jpg);
+    background-image: url(../../assets/img/bg-blur-fixe-horreur.jpg);
     width: 100%;
 }
 
@@ -130,35 +130,35 @@ p {
 /* débutCatégories */
 /* Cards Background Images */
 .bg-romance {
-    background-image: url('../img/genres-romance.jpg');
+    background-image: url('../../assets/img/genres-romance.jpg');
     background-size: cover;
     background-position: center;
     min-height: 400px;
 }
 
 .bg-action {
-    background-image: url('../img/genres-raiden.jpg');
+    background-image: url('../../assets/img/genres-raiden.jpg');
     background-size: cover;
     background-position: center;
     min-height: 400px;
 }
 
 .bg-fantastique {
-    background-image: url('../img/genres-fantastique.jpg');
+    background-image: url('../../assets/img/genres-fantastique.jpg');
     background-size: cover;
     background-position: center;
     min-height: 400px;
 }
 
 .bg-comedie {
-    background-image: url('../img/genres-comedie.jpg');
+    background-image: url('../../assets/img/genres-comedie.jpg');
     background-size: cover;
     background-position: center;
     min-height: 400px;
 }
 
 .bg-science {
-    background-image: url('../img/genres-sci.jpg');
+    background-image: url('../../assets/img/genres-sci.jpg');
     background-size: cover;
     background-position: center;
     min-height: 400px;
