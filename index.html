@@ -3,10 +3,10 @@
 <head>
     <!--    Metas Données-->
     <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Portfolio - Morais Pedro</title>
-    <meta name="description"
-          content="Actuellement à la recherche d'une alternance pour 2025 (deuxième année de dev), j'aime affronter des nouveaux défis et je suis motivé à poursuivre ce rêve !">
+    <meta content="Actuellement à la recherche d'une alternance pour 2025 (deuxième année de dev), j'aime affronter des nouveaux défis et je suis motivé à poursuivre ce rêve !"
+          name="description">
     <meta content="all" name="robots"/>
     <!--    Meta OG-->
     <meta content="Recherche Alternance - Développeur Web" property="og:title"/>
@@ -14,42 +14,43 @@
           property="og:description"/>
     <meta content="https://moraistp.github.io/portfolio/" property="og:url"/>
     <!--Feuilles de style-->
-    <link rel="stylesheet" href="css/style.css"/>
-    <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
-            rel="stylesheet"
-    />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link href="css/style.css" rel="stylesheet"/>
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
     <!--Fin des feuilles de style-->
-    <script src="https://kit.fontawesome.com/26d2d5baaa.js" crossorigin="anonymous"></script>
+    <!--    Scripts-->
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/26d2d5baaa.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 </head>
 <body class="dark-mode">
+<!--Début HEADER-->
 <header>
     <nav>
         <!--          LOGO + Texte LOGO-->
         <div class="logo">
-            <a href="index.html"><img src="./assets/img/logo.png" alt="logo"/></a>
+            <a href="index.html"><img alt="logo" src="./assets/img/logo.png"/></a>
             <h2>PORTFOLIO</h2>
         </div>
         <ul>
             <li>
-                <a href="#">à propos</a>
+                <a href="#apropos">à propos</a>
             </li>
             <li><p>|</p></li>
             <li>
-                <a href="#">Skills</a>
+                <a href="#skills">Skills</a>
             </li>
             <li><p>|</p></li>
             <li>
-                <a href="#">Projets</a>
+                <a href="#projets">Projets</a>
             </li>
             <li><p>|</p></li>
             <li>
-                <a href="#">Contact</a>
+                <a href="#contact">Contact</a>
             </li>
             <li>
 
-                </div>
+
             </li>
         </ul>
         <!--          Début BURGER-->
@@ -77,87 +78,150 @@
         </ul>
     </div>
 </header>
+<!--Fin HEADER-->
 
-<!-- Section Accueil -->
+
+<!--Bouton Dark/Light-->
 <button id="dark-mode-toggle">
-    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+    <svg fill="#e8eaed" height="24px" viewBox="0 -960 960 960" width="24px" xmlns="http://www.w3.org/2000/svg">
         <path d="M480-120q-150 0-255-105T120-480q0-150 105-255t255-105q14 0 27.5 1t26.5 3q-41 29-65.5 75.5T444-660q0 90 63 153t153 63q55 0 101-24.5t75-65.5q2 13 3 26.5t1 27.5q0 150-105 255T480-120Zm0-80q88 0 158-48.5T740-375q-20 5-40 8t-40 3q-123 0-209.5-86.5T364-660q0-20 3-40t8-40q-78 32-126.5 102T200-480q0 116 82 198t198 82Zm-10-270Z"/>
     </svg>
-    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+    <svg fill="#e8eaed" height="24px" viewBox="0 -960 960 960" width="24px" xmlns="http://www.w3.org/2000/svg">
         <path d="M480-360q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35Zm0 80q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM200-440H40v-80h160v80Zm720 0H760v-80h160v80ZM440-760v-160h80v160h-80Zm0 720v-160h80v160h-80ZM256-650l-101-97 57-59 96 100-52 56Zm492 496-97-101 53-55 101 97-57 59Zm-98-550 97-101 59 57-100 96-56-52ZM154-212l101-97 55 53-97 101-59-57Zm326-268Z"/>
     </svg>
 </button>
-<section id="home" class="hero-section">
-
-    <h1>Pedro MORAIS</h1>
-    <p>Développeur - Recherche Alternance pour 2025 </p>
-    <p><span class="typed-text"></span></p>
-    <div class="lightning-border">
-        <img src="assets/img/pp1-2.png" alt="Photo de profil" class="hero-image"/>
-    </div>
-</section>
-
-
-<!-- Section Projets -->
-<section id="projects" class="projects">
-    <h2>Projets</h2>
-    <div class="project-grid">
-        <div class="project-card">
-            <h3>Projet 1</h3>
-            <p>Le premier site réalisé en HTML/CSS + Bootstrap.</p>
-            <a href="#" target="_blank">
-                <button class="btn-projet">Voir le projet</button>
-            </a>
+<main>
+    <!--Section HERO + BG Vanta-->
+    <section class="hero-section" id="vantajs">
+        <div class="hero-text">
+            <h1>Morais Pedro</h1>
+            <p>Etudiant chez Need For School en première année, je prépare un Bachelor Concepteur Déveeloppeur
+                d’Applications. <br>Je recherche une alternance pour ma deuxième année ! </p>
+            <div class="button-hero">
+                <a href="#contact">
+                    <button class="color-2d1b38">Me contacter</button>
+                </a>
+                <a href="#projets">
+                    <button class="color-f04bff">Projets</button>
+                </a></div>
+            <p><span class="typed-text"></span></p>
         </div>
-    </div>
-</section>
+        <div class="hero-photo">
+            <img alt="Photo de profil" class="hero-image" src="assets/img/pp1-2.png"/>
+        </div>
+    </section>
+    <!-- Section À propos -->
+    <section class="apropos" id="apropos">
+        <h2>à propos</h2>
+        <div class="center-div">
+            <div class="apropos-texte">
+                <p>
+                    Je m'appelle Pedro, j'ai 29 ans et je suis actuellement en première année de <a
+                        class="liquid" href="https://www.needfor-school.com/bachelor-developpeur-web/">Bachelor
+                    Concepteur
+                    Développeur d'Applications</a> à
+                    l'école
+                    Need For School. <br> Passionné par le monde du dév, j'ai commencé une reconversion professionnelle
+                    pour
+                    transformer ma passion en métier. Etant curieux, j'apprends chaque
+                    jour à maîtriser les langages de programmation et à développer des projets innovants.
+                </p>
+                <p>
+                    Je suis à la recherche d'une alternance pour ma deuxième année, où je pourrai mettre à profit mes
+                    compétences
+                    tout en continuant à apprendre au sein d'une équipe dynamique. Désireux d'apprendre et déterminé à
+                    relever
+                    de
+                    nouveaux défis, je m'engage à apporter ma rigueur, ma créativité et mon enthousiasme à chaque projet
+                    que
+                    je
+                    réalise.
+                </p>
+                <div class="button-apropos">
 
-<!-- Section À propos -->
-<section id="about" class="about-section">
-    <h2>Laissez-moi vous parler un peu de moi...</h2>
-    <p>
-        Je m'appelle Pedro, j'ai 29 ans et je suis actuellement en première année de Bachelor Développeur Web à l'école
-        Need For School. Passionné par le monde du dév, j'ai entrepris une reconversion professionnelle pour
-        transformer ma passion en métier. Etant curieux, j'apprends chaque
-        jour à maîtriser les langages de programmation et à développer des projets innovants.
-    </p>
-    <p>
-        Je suis à la recherche d'une alternance pour ma deuxième année, où je pourrai mettre à profit mes compétences
-        tout en continuant à apprendre au sein d'une équipe dynamique. Désireux d'apprendre et déterminé à relever de
-        nouveaux défis, je m'engage à apporter ma rigueur, ma créativité et mon enthousiasme à chaque projet que je
-        réalise.
-    </p>
-</section>
+                    <a download="cv.txt" href="download/cv.txt">
+                        <button class="color-f04bff">Télécharger CV</button>
+                    </a>
+                    <a href="#contact">
+                        <button class="color-2d1b38">Me contacter</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div id="ring"></div>
+    <svg
+            class="editorial"
+            preserveAspectRatio="none"
+            viewBox="0 24 150 28 "
+            xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink"
+    >
+        <defs>
+            <path
+                    d="M-160 44c30 0
+    58-18 88-18s
+    58 18 88 18
+    58-18 88-18
+    58 18 88 18
+    v44h-352z"
+                    id="gentle-wave"
+            />
+        </defs>
+        <g class="parallax1">
+            <use fill="#f461c1" x="50" xlink:href="#gentle-wave" y="3"/>
+        </g>
+        <g class="parallax2">
+            <use fill="#4579e2" x="50" xlink:href="#gentle-wave" y="0"/>
+        </g>
+        <g class="parallax3">
+            <use fill="#3461c1" x="50" xlink:href="#gentle-wave" y="9"/>
+        </g>
+        <g class="parallax4">
+            <use fill="#231535" x="50" xlink:href="#gentle-wave" y="6"/>
+        </g>
+    </svg>
+    <!-- Section Projets -->
 
-<!-- Section Compétences -->
-<section id="skills" class="competences">
-    <h2>Compétences</h2>
-    <ul>
-        <li>HTML/CSS</li>
-        <li>JavaScript</li>
-        <li>React</li>
-        <li>API REST</li>
-        <li>SQL</li>
-    </ul>
-</section>
+
+    <!-- Section Compétences -->
+    <section class="competences" id="skills">
+        <h2>Compétences</h2>
+        <ul>
+            <li>HTML/CSS</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>API REST</li>
+            <li>SQL</li>
+        </ul>
+    </section>
 
 
-<!-- Section Contact -->
-<section id="contact" class="contact-section">
-    <h2>Contact</h2>
-    <p>
-        Email:
-        <a href="mailto:morais.pedro@outlook.fr">morais.pedro@outlook.fr</a>
-    </p>
-    <p>Téléphone: <a href="tel:+33779562797">0779562797</a></p>
-    <a href="./download/morais-pedro.pdf" download="morais-pedro.pdf">
-        <button class="download-cv">Télécharger CV</button>
-    </a>
-</section>
-<!--Fin de la section contact-->
-
+    <!-- Section Contact -->
+    <section class="contact-section" id="contact">
+        <h2>Contact</h2>
+        <p>
+            Email:
+            <a href="mailto:morais.pedro@outlook.fr">morais.pedro@outlook.fr</a>
+        </p>
+        <p>Téléphone: <a href="tel:+33779562797">0779562797</a></p>
+        <a download="morais-pedro.pdf" href="">
+            <button class="download-cv">Télécharger CV</button>
+        </a>
+    </section>
+    <!--Fin de la section contact-->
+</main>
 <!--    Scripts -->
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 <script src="js/script.js"></script>
+<script> VANTA.NET({
+    el: "#vantajs",
+    mouseControls: true,
+    touchControls: true,
+    gyroControls: false,
+    minHeight: 200.00,
+    minWidth: 200.00,
+    scale: 1.00,
+    scaleMobile: 1.00
+})          </script>
 </body>
 </html>

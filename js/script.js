@@ -1,3 +1,4 @@
+// Bouton Dark/Light
 let darkmode = localStorage.getItem('dark-mode')
 const darkModetoggle = document.getElementById('dark-mode-toggle')
 
@@ -19,12 +20,13 @@ darkModetoggle.addEventListener("click", () => {
 
 var typed = new Typed(".typed-text", {
     strings: [
-        "Étudiant Développeur",
+        "Étudiant Développeur en 1er année",
         "Passionné par l'IA",
         "Fan de jeux vidéo",
+        "Motivé et désireux d'apprendre"
     ],
-    typeSpeed: 50,
-    backSpeed: 50,
+    typeSpeed: 40,
+    backSpeed: 20,
     loop: true,
 });
 // Menu burger

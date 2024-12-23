@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 :root {
     /* Couleurs principales Raiden */
     --primary-violet: #6f1f8e; /* Violet intense (de la robe) */
@@ -32,7 +34,7 @@ html {
 }
 
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: "Lato", sans-serif;
     margin: 0;
     padding: 0;
     background-color: var(--bg-white);
@@ -66,8 +68,16 @@ body {
     background-color: #8a6df1;
 }
 
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
 /*Navbar mode light*/
 nav {
+    position: sticky;
+    top: 0;
     padding: 5px 5%;
     display: flex;
     justify-content: space-between;
@@ -75,6 +85,7 @@ nav {
     box-shadow: rgba(50, 50, 93, 0.25) 0 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0 1px 3px -1px;
     z-index: 1;
+    background-color: var(--bg-white);
 }
 
 nav .logo {
@@ -262,6 +273,7 @@ nav ul li a:hover {
     position: fixed;
     top: 200px;
     right: 20px;
+    z-index: 100;
 }
 
 #dark-mode-toggle svg:last-child {
@@ -290,101 +302,230 @@ nav ul li a:hover {
 .hero-section {
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
+.hero-text {
+    width: 50%;
+}
+
+.hero-text .typed-text {
+
+    font-size: 2rem;
+    color: #ffffff;
+}
+
 .hero-section h1 {
-    font-size: 3rem;
-    color: #5d3fd3;
-    margin: 5rem 0 0 0;
+    font-family: "Anton", serif;
+    font-size: 10rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 0;
+    text-align: left;
+    letter-spacing: 5px;
 }
 
 .hero-section p {
     margin: 0;
+    font-size: 2rem;
+    text-align: left;
+    color: var(--bg-white);
 }
 
-.typed-text {
-    font-size: 1.5rem;
-    color: #c993ff;
-}
 
 /* Effets sur ma photo */
 .hero-image {
     margin-top: 2rem;
-    border-radius: 100%;
-    width: 100%;
+    min-width: 500px;
 }
 
-.lightning-border {
-    width: 300px;
-    /*height: 300px;*/
-    position: relative;
-    border-radius: 100%;
+.button-hero {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    text-align: center;
 }
 
-.lightning-border::before,
-.lightning-border::after {
-    content: "";
+.button-hero button {
+    min-width: 300px;
+    min-height: 100px;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-size: 2rem;
+    margin: 40px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: #59228f solid 1px;
+}
+
+.color-2d1b38 {
+    background-color: #2b1b38;
+    color: #fff;
+}
+
+.color-f04bff {
+    background-color: #f04bff;
+    color: #fff;
+}
+
+.color-2d1b38:hover {
+    background-color: #fff;
+    color: #2b1b38;
+}
+
+.color-f04bff:hover {
+    background-color: #fff;
+    color: #f04bff;
+}
+
+
+.apropos h2 {
+    font-family: "Anton", serif;
+    font-size: 10rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin: 200px 0 0;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.apropos .center-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.apropos-texte {
+    font-size: 2rem;
+    background-color: #311757;
+    padding: 30px;
+    margin: 30px;
+    color: #fff;
+    width: 70%;
+    text-align: center;
+}
+
+.apropos-texte a {
+    color: #ee4bfd;
+    transition: 0.5s ease-in-out;
+}
+
+.apropos-texte a:hover {
+    color: #B80000;
+}
+
+.button-apropos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.button-apropos button {
+    min-width: 300px;
+    min-height: 100px;
+    padding: 20px 40px;
+    border-radius: 10px;
+    font-size: 2rem;
+    margin: 40px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: #59228f solid 1px;
+}
+
+#ring {
     position: absolute;
-    top: 30px;
+    width: 100%;
+    height: 100vh;
+    top: 0;
     left: 0;
-    background: linear-gradient(
-            45deg,
-            #ff0000,
-            #00f0f0,
-            #00ff00,
-            #0000ff,
-            #ff0000,
-            #00f0f0,
-            #00ff00,
-            #0000ff,
-            #f00f0f
-    );
-    width: 300px;
-    height: 385px;
-    transform: scale(1.02);
     z-index: -1;
-    background-size: 500%;
-    animation: animate 20s infinite;
-    border-radius: 100%;
 }
 
-.lightning-border::after {
-    filter: blur(20px);
+.editorial {
+    display: block;
+    width: 100%;
+    height: 60px;
+    max-height: 60px;
+    margin: 0;
+    z-index: 5;
+    bottom: 0;
+    float: left;
 }
 
-/* Animation */
-@keyframes animate {
-    0% {
-        background-position: 0 0;
+.parallax1 > use {
+    animation: move-forever1 10s linear infinite;
+
+    &:nth-child(1) {
+        animation-delay: -2s;
     }
-    50% {
-        background-position: 300% 0;
+}
+
+.parallax2 > use {
+    animation: move-forever2 8s linear infinite;
+
+    &:nth-child(1) {
+        animation-delay: -2s;
+    }
+}
+
+.parallax3 > use {
+    animation: move-forever3 6s linear infinite;
+
+    &:nth-child(1) {
+        animation-delay: -2s;
+    }
+}
+
+.parallax4 > use {
+    animation: move-forever4 4s linear infinite;
+
+    &:nth-child(1) {
+        animation-delay: -2s;
+    }
+}
+
+@keyframes move-forever1 {
+    0% {
+        transform: translate(85px, 0%);
     }
     100% {
-        background-position: 0 0;
+        transform: translate(-90px, 0%);
     }
 }
 
-.about-section,
-.contact-section,
-.skills-section,
-.projects-section {
-    padding: 4rem 2rem;
-    text-align: center;
+@keyframes move-forever2 {
+    0% {
+        transform: translate(-90px, 0%);
+    }
+    100% {
+        transform: translate(85px, 0%);
+    }
 }
 
-
-.projects h2 {
-    font-size: 5rem;
-    color: #5d3fd3;
-    text-align: center;
+@keyframes move-forever3 {
+    0% {
+        transform: translate(85px, 0%);
+    }
+    100% {
+        transform: translate(-90px, 0%);
+    }
 }
 
-/*  */
+@keyframes move-forever4 {
+    0% {
+        transform: translate(-90px, 0%);
+    }
+    100% {
+        transform: translate(85px, 0%);
+    }
+}
+
 .project-grid {
     display: flex;
     justify-content: space-around;
