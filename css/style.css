@@ -25,12 +25,14 @@
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
 }
 
 html {
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
 body {
@@ -39,6 +41,7 @@ body {
     padding: 0;
     background-color: var(--bg-white);
     color: var(--bg-black);
+    overflow-x: hidden;
 }
 
 /* Mode sombre */
@@ -113,7 +116,6 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #000000;
-    font-size: 95%;
     font-weight: 400;
     padding: 4px 8px;
     border-radius: 5px;
@@ -209,55 +211,7 @@ nav ul li a:hover {
     border-radius: 5px;
 }
 
-
-/* Section À propos et autres dans le mode sombre */
-.dark-mode .skills-section,
-.dark-mode .projects, .dark-mode .competences,
-.dark-mode .contact-section {
-    background-color: #2a2a40;
-}
-
-/* Projets dans le mode sombre */
-.dark-mode .project-card {
-    background-image: url("../assets/img/horreur.jpg");
-    background-size: cover;
-    min-width: 400px;
-    min-height: 300px;
-    background-position: center;
-    background-color: var(--bg-black);
-    transition: 1s;
-}
-
-.btn-projet {
-    background-color: #8a6df1;
-    color: var(--bg-white);
-    border-radius: 10%;
-    padding: 10px;
-}
-
-.project-card h3, .project-card p, .btn-projet {
-    color: var(--bg-white);
-    display: none
-}
-
-
-.project-card:hover {
-    transition: 0.5s ease-in-out;
-    color: var(--bg-white);
-
-    scale: 1.2;
-}
-
-
-.project-card:hover p, .project-card:hover h3, .project-card:hover .btn-projet {
-    display: block
-}
-
-
-/* Bouton télécharger CV dans le mode sombre */
-.dark-mode .download-cv {
-    background-color: #8a6df1;
-}
+/*Fin NAVBAR Fin NAVBARFin NAVBARFin NAVBARFin NAVBARFin NAVBARFin NAVBARFin NAVBARFin NAVBARFin NAVBARFin NAVBARFin NAVBARFin NAVBAR*/
 
 
 /* Bouton Light Mode */
@@ -298,13 +252,14 @@ nav ul li a:hover {
     display: none
 }
 
-/* Section MOI */
+/* Section MOI Section MOI Section MOI Section MOI Section MOI Section MOI Section MOI Section MOI Section MOI */
 .hero-section {
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    flex-wrap: wrap;
 }
 
 .hero-text {
@@ -336,29 +291,26 @@ nav ul li a:hover {
 }
 
 
-/* Effets sur ma photo */
-.hero-image {
-    margin-top: 2rem;
-    min-width: 500px;
-}
-
 .button-hero {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
     align-items: center;
     text-align: center;
+    width: auto;
 }
 
 .button-hero button {
-    min-width: 300px;
+    min-width: 267px;
     min-height: 100px;
     padding: 20px 40px;
     border-radius: 10px;
     font-size: 2rem;
-    margin: 40px 20px;
+    margin: 20px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     border: #59228f solid 1px;
+    max-width: 100%;
 }
 
 .color-2d1b38 {
@@ -381,7 +333,17 @@ nav ul li a:hover {
     color: #f04bff;
 }
 
+.hero-photo {
+    width: 30%;
+}
 
+.hero-photo img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+}
+
+/*Section à propos Section à propos Section à propos Section à propos Section à propos Section à propos Section à propos Section à propos Section à propos*/
 .apropos h2 {
     font-family: "Anton", serif;
     font-size: 10rem;
@@ -410,6 +372,11 @@ nav ul li a:hover {
     text-align: center;
 }
 
+.apropos-texte p {
+    width: 100%
+}
+
+
 .apropos-texte a {
     color: #ee4bfd;
     transition: 0.5s ease-in-out;
@@ -422,22 +389,26 @@ nav ul li a:hover {
 .button-apropos {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     text-align: center;
+    width: auto;
 }
 
 .button-apropos button {
-    min-width: 300px;
+    min-width: 307px;
     min-height: 100px;
     padding: 20px 40px;
     border-radius: 10px;
     font-size: 2rem;
-    margin: 40px 20px;
+    margin: 20px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
     border: #59228f solid 1px;
+    max-width: 100%;
 }
 
+/*Divider Divider Divider Divider Divider Divider Divider Divider Divider Divider Divider Divider Divider Divider Divider Divider*/
 .divider {
     display: block !important;
 }
@@ -529,7 +500,7 @@ nav ul li a:hover {
 }
 
 
-/*Section skills*/
+/*Section skillsSection skillsSection skillsSection skillsSection skillsSection skillsSection skillsSection skillsSection skills*/
 .skills h2 {
     font-family: "Anton", serif;
     font-size: 10rem;
@@ -546,7 +517,7 @@ nav ul li a:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
-
+    flex-wrap: wrap;
 }
 
 .center-div .grid {
@@ -554,17 +525,17 @@ nav ul li a:hover {
     margin: 30px;
     padding: 50px;
     border-radius: 10%;
-    
+    max-width: 500px;
 }
 
 .grid img {
     width: 100%;
     height: auto;
-    max-width: 100%;
 }
 
-/*Médiaaaas */
-@media screen and (max-width: 790px) {
+
+/*MédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaas */
+@media (max-width: 1024px) {
     .hamburger {
         display: block;
     }
@@ -573,3 +544,116 @@ nav ul li a:hover {
         display: none;
     }
 }
+
+@media (max-width: 768px) {
+    .hero-text {
+        width: 80%
+    }
+
+    .hero-text h1 {
+        font-size: 3rem
+    }
+
+    .hero-text p {
+        font-size: 1.5rem
+    }
+
+    .hero-section {
+        width: 100%;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+
+}
+
+@media (max-width: 576px) {
+    .hero-photo {
+        margin-top: 30px;
+    }
+
+    .hero-text .typed-text {
+        font-size: 1.3rem;
+        color: #ffffff;
+    }
+
+    .button-hero button {
+        max-width: 150px;
+        min-height: auto;
+        padding: 20px 40px;
+        border-radius: 10px;
+        font-size: 1.4rem;
+        margin: auto;
+        margin-top: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        border: #59228f solid 1px;
+        width: 100%;
+    }
+
+    .apropos h2 {
+        font-size: 5rem
+    }
+
+    .button-apropos button {
+        min-width: 150px;
+        min-height: auto;
+        padding: 20px 40px;
+        border-radius: 10px;
+        font-size: 1rem;
+        margin: auto;
+        margin-top: 10px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        border: #59228f solid 1px;
+        width: 100%;
+    }
+
+    .apropos-texte {
+        font-size: 1.5rem;
+        background-color: #311757;
+        padding: 30px;
+        margin: 30px;
+        color: #fff;
+        width: 70%;
+        text-align: center;
+    }
+
+    .skills h2 {
+        font-size: 5rem;
+    }
+
+    @media (max-width: 320px) {
+        .hero-text .typed-text {
+            font-size: 1rem;
+            color: #ffffff;
+        }
+
+        .apropos-texte {
+            font-size: 1rem;
+            background-color: #311757;
+            padding: 30px;
+            margin: 30px;
+            color: #fff;
+            width: 70%;
+            text-align: center;
+        }
+
+        .apropos h2 {
+            font-size: 3rem
+        }
+
+        .skills h2 {
+            font-size: 3rem;
+        }
+    }
+}
+
+
+
+
+
