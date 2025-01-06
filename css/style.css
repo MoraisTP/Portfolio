@@ -1,19 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 :root {
-    /* Couleurs principales Raiden */
-    --primary-violet: #6f1f8e; /* Violet intense (de la robe) */
-    --primary-blue: #3a0ca3; /* Bleu foncé (élément électro) */
-    --primary-pink: #a04bb4; /* Rose lumineux (ses accessoires) */
+    /*Couleurs main*/
+    --text: #ffffff;
+    --text-complement: #000000;
 
-    /* Couleurs complémentaires */
-    --complementary-yellow: #f7d860; /* Jaune pâle (complément du violet) */
-    --complementary-gold: #ffbe0b; /* Or (complément du bleu) */
-    --complementary-orange: #fca311; /* Orange (complément du rose) */
+    --background: #1A0538;
+    --background-complement: #FFD6C7;
 
+    --background2: #6404e3;
+    --background2-complement: #E3D104;
+
+    --primary: #F04BFF;
+    --primary-complement: #4BFF4B;
+
+    --secondary: #2D1B38;
+    --secondary-complement: #B8E4A6;
+
+    --accent: #63F836;
+    --accent-complement: #3625F8;
     /* Couleurs neutres */
-    --bg-black: #1f1f1f; /* Noir pour le contraste */
-    --bg-white: #f5f5f5; /* Blanc pour le fond */
+    --bg-black: #1f1f1f;
+    --bg-white: #f5f5f5;
+
+    /*Complementaires Light:*/
 
     /* Tailles des titres */
     --h1-size: 4rem;
@@ -46,13 +56,13 @@ body {
 
 /* Mode sombre */
 .dark-mode {
-    background-color: #1A0538;
+    background-color: var(--background);
     color: var(--bg-white);
 }
 
 /* Navbar Mode sombre*/
 .dark-mode nav {
-    background-color: #1A0538;
+    background-color: var(--background);
     border-bottom: #fff 1px solid;
 }
 
@@ -61,14 +71,10 @@ body {
     color: var(--bg-white);
 }
 
-/* Effet de texte mode sombre*/
-.dark-mode .typed-text {
-    color: #8a6df1;
-}
 
 /* Bouton Dark Mode */
 .dark-mode #dark-mode-toggle {
-    background-color: #8a6df1;
+    background-color: var(--primary);
 }
 
 header {
@@ -115,7 +121,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #000000;
+    color: var(--bg-black);
     font-weight: 400;
     padding: 4px 8px;
     border-radius: 5px;
@@ -125,7 +131,7 @@ nav ul li a {
 
 nav ul li a:hover {
     background-color: #f5f5f5;
-    color: #000000
+    color: var(--accent-complement);
 }
 
 /*Hamburger light*/
@@ -136,19 +142,19 @@ nav ul li a:hover {
 
 /*hamburger mode dark*/
 .dark-mode .hamburger .line {
-    background-color: #fff
+    background-color: var(--bg-white);
 }
 
 .hamburger .line {
     width: 25px;
     height: 1px;
-    background-color: #000000;
+    background-color: var(--text-complement);
     display: block;
     margin: 7px auto;
     transition: all 0.3s ease-in-out;
 }
 
-/*Animation lines*/
+/*Animation lines DU BURGER*/
 .hamburger-active {
     transition: all 0.3s ease-in-out;
     transition-delay: 0.6s;
@@ -204,7 +210,7 @@ nav ul li a:hover {
 
 .menubar ul li a {
     text-decoration: none;
-    color: #000;
+    color: var(--text-complement);
     font-size: 95%;
     font-weight: 400;
     padding: 5px 10px;
@@ -214,13 +220,13 @@ nav ul li a:hover {
 /*Fin NAVBAR Fin NAVBARFin NAVBARFin NAVBARFin NAVBARFin NAVBARFin NAVBARFin NAVBARFin NAVBARFin NAVBARFin NAVBARFin NAVBARFin NAVBAR*/
 
 
-/* Bouton Light Mode */
+/* Bouton Light Mode/dark mode */
 #dark-mode-toggle {
     height: 50px;
     width: 50px;
     padding: 0;
     border-radius: 50%;
-    background-color: #1f1f1f;
+    background-color: var(--background2-complement);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -267,10 +273,11 @@ nav ul li a:hover {
     width: 50%;
 }
 
+/*typed text js*/
 .hero-text .typed-text {
 
     font-size: 2rem;
-    color: #ffffff;
+    color: var(--bg-white);
 
 }
 
@@ -279,7 +286,7 @@ nav ul li a:hover {
     font-size: 10rem;
     font-weight: lighter;
     text-transform: uppercase;
-    color: #ffffff;
+    color: var(--bg-white);
     margin: 0;
     text-align: left;
     letter-spacing: 5px;
@@ -293,7 +300,7 @@ nav ul li a:hover {
     margin-top: 40px;
 }
 
-
+/*display bouton*/
 .button-hero {
     display: flex;
     justify-content: flex-start;
@@ -304,6 +311,7 @@ nav ul li a:hover {
     margin-top: 40px;
 }
 
+/*style du bouton*/
 .button-hero button {
     min-width: 267px;
     min-height: 100px;
@@ -318,25 +326,26 @@ nav ul li a:hover {
 }
 
 .color-2d1b38 {
-    background-color: #2b1b38;
+    background-color: var(--secondary);
     color: #fff;
 }
 
 .color-f04bff {
-    background-color: #f04bff;
-    color: #fff;
+    background-color: var(--primary);
+    color: var(--bg-white);
 }
 
 .color-2d1b38:hover {
-    background-color: #fff;
-    color: #2b1b38;
+    background-color: var(--bg-white);
+    color: var(--secondary);
 }
 
 .color-f04bff:hover {
-    background-color: #fff;
-    color: #f04bff;
+    background-color: var(--bg-white);
+    color: var(--primary);
 }
 
+/*div photo/img*/
 .hero-photo {
     width: 25%;
 }
@@ -353,27 +362,29 @@ nav ul li a:hover {
     font-size: 10rem;
     font-weight: lighter;
     text-transform: uppercase;
-    color: #ffffff;
+    color: var(--accent);
     margin: 200px 0 0;
     text-align: center;
     letter-spacing: 5px;
 }
 
+/*display section à propos*/
 .apropos .center-div {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
+/*style texte/bouton*/
 .apropos-texte {
     font-size: 2rem;
     background-color: #311757;
     padding: 30px;
     margin: 30px;
-    color: #fff;
+    color: var(--bg-white);
     width: 70%;
     text-align: center;
+    border-radius: 30px;
 }
 
 .apropos-texte p {
@@ -382,7 +393,7 @@ nav ul li a:hover {
 
 
 .apropos-texte a {
-    color: #ee4bfd;
+    color: var(--primary);
     transition: 0.5s ease-in-out;
 }
 
@@ -412,109 +423,22 @@ nav ul li a:hover {
     max-width: 100%;
 }
 
-/*Divider Divider Divider Divider Divider Divider Divider Divider Divider Divider Divider Divider Divider Divider Divider Divider*/
-.divider {
-    display: block !important;
-}
-
-#ring {
-    position: absolute;
-    width: 100%;
-    height: 100vh;
-    z-index: -1;
-}
-
-.editorial {
-    display: block;
-    width: 100%;
-    height: 60px;
-    max-height: 60px;
-    margin: 0;
-    z-index: 5;
-    bottom: 0;
-    float: left;
-}
-
-.parallax1 > use {
-    animation: move-forever1 10s linear infinite;
-
-    &:nth-child(1) {
-        animation-delay: -2s;
-    }
-}
-
-.parallax2 > use {
-    animation: move-forever2 8s linear infinite;
-
-    &:nth-child(1) {
-        animation-delay: -2s;
-    }
-}
-
-.parallax3 > use {
-    animation: move-forever3 6s linear infinite;
-
-    &:nth-child(1) {
-        animation-delay: -2s;
-    }
-}
-
-.parallax4 > use {
-    animation: move-forever4 4s linear infinite;
-
-    &:nth-child(1) {
-        animation-delay: -2s;
-    }
-}
-
-@keyframes move-forever1 {
-    0% {
-        transform: translate(85px, 0%);
-    }
-    100% {
-        transform: translate(-90px, 0%);
-    }
-}
-
-@keyframes move-forever2 {
-    0% {
-        transform: translate(-90px, 0%);
-    }
-    100% {
-        transform: translate(85px, 0%);
-    }
-}
-
-@keyframes move-forever3 {
-    0% {
-        transform: translate(85px, 0%);
-    }
-    100% {
-        transform: translate(-90px, 0%);
-    }
-}
-
-@keyframes move-forever4 {
-    0% {
-        transform: translate(-90px, 0%);
-    }
-    100% {
-        transform: translate(85px, 0%);
-    }
-}
-
 
 /*Section skillsSection skillsSection skillsSection skillsSection skillsSection skillsSection skillsSection skillsSection skills*/
 .skills h2 {
     font-family: "Anton", serif;
-    font-size: 10rem;
+    font-size: 8rem;
     font-weight: lighter;
     text-transform: uppercase;
-    color: #ffffff;
-    margin: 200px 0 0;
+    color: var(--accent);
+    margin: 100px 0 0;
     text-align: center;
     letter-spacing: 5px;
 }
+
+
+/*Grid+Centre+3 col */
+
 
 .skills .center-div {
     display: grid;
@@ -525,15 +449,17 @@ nav ul li a:hover {
     width: 70%;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 150px;
+    padding: 10px 0;
 }
 
+/*style du grid/de la div*/
 .center-div .grid {
     background: #311757;
     margin-top: 70px;
     padding: 30px;
     border-radius: 10%;
-    max-width: 400px;
-
+    max-width: 70%;
 }
 
 .grid img {
@@ -541,8 +467,82 @@ nav ul li a:hover {
     height: auto;
 }
 
+/*partie card animated*/
+.card {
+    margin: 0 auto;
+    padding: 2em;
+    width: 100%;
+    background: #1c1f2b;
+    text-align: center;
+    position: relative;
+
+}
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.card::after, .card::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), transparent, #fd7716, #fd4b00);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 10px;
+    animation: 3s spin linear infinite;
+    border-radius: 40px;
+}
+
+/*changement couleur animation pour chaque card*/
+.css::after, .css::before {
+    background-image: conic-gradient(from var(--angle), transparent, #2195f2, #126cb4);
+}
+
+.github::after, .github::before {
+    background-image: conic-gradient(from var(--angle), transparent, #492400, #000000);
+}
+
+.bootstrap::after, .bootstrap::before {
+    background-image: conic-gradient(from var(--angle), transparent, #6d10ef, #41019f);
+}
+
+.tailwind::after, .tailwind::before {
+    background-image: conic-gradient(from var(--angle), transparent, #048ba2, #0595ae);
+}
+
+.photoshop::after, .photoshop::before {
+    background-image: conic-gradient(from var(--angle), transparent, #001833, #2eaafd);
+
+}
+
+/* Supprime les débordements de l'anim SI il y en avait*/
+.skills .center-div {
+    overflow: hidden;
+}
+
+.card::before {
+    filter: blur(1.5rem);
+    opacity: 0.5;
+
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+    to {
+        --angle: 360deg;
+    }
+}
 
 /*MédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaas */
+/*Laptop/tablette*/
 @media (max-width: 1024px) {
     .hamburger {
         display: block;
@@ -553,9 +553,14 @@ nav ul li a:hover {
     }
 }
 
+/*tablette*/
 @media (max-width: 768px) {
     .hero-text {
         width: 80%
+    }
+
+    .skills .center-div {
+        grid-template-columns: 1fr;
     }
 
     .hero-text h1 {
@@ -579,6 +584,7 @@ nav ul li a:hover {
 
 }
 
+/*mobile*/
 @media (max-width: 576px) {
     .hero-photo {
         margin-top: 30px;
@@ -635,6 +641,7 @@ nav ul li a:hover {
         font-size: 5rem;
     }
 
+    /*mobile petite taille*/
     @media (max-width: 320px) {
         .hero-text .typed-text {
             font-size: 1rem;
