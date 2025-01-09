@@ -77,23 +77,20 @@ body {
     background-color: var(--primary);
 }
 
-header {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
 
 /*Navbar mode light*/
 nav {
     position: sticky;
     top: 0;
     padding: 5px 5%;
+    width: 100%;
+    max-height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: rgba(50, 50, 93, 0.25) 0 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0 1px 3px -1px;
-    z-index: 1;
+    z-index: 10;
     background-color: var(--bg-white);
 }
 
@@ -116,7 +113,7 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 1.5rem;
+    margin: auto 10px;
 }
 
 nav ul li a {
@@ -126,7 +123,7 @@ nav ul li a {
     padding: 4px 8px;
     border-radius: 5px;
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 nav ul li a:hover {
@@ -271,6 +268,7 @@ nav ul li a:hover {
 
 .hero-text {
     width: 50%;
+    margin-top: 30px;
 }
 
 /*typed text js*/
@@ -283,7 +281,7 @@ nav ul li a:hover {
 
 .hero-section h1 {
     font-family: "Anton", serif;
-    font-size: 10rem;
+    font-size: 6rem;
     font-weight: lighter;
     text-transform: uppercase;
     color: var(--bg-white);
@@ -294,7 +292,7 @@ nav ul li a:hover {
 
 .hero-section p {
     margin: 0;
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-align: left;
     color: var(--bg-white);
     margin-top: 40px;
@@ -348,6 +346,7 @@ nav ul li a:hover {
 /*div photo/img*/
 .hero-photo {
     width: 25%;
+    margin-top: 30px;
 }
 
 .hero-photo img {
@@ -359,7 +358,7 @@ nav ul li a:hover {
 /*Section à propos Section à propos Section à propos Section à propos Section à propos Section à propos Section à propos Section à propos Section à propos*/
 .apropos h2 {
     font-family: "Anton", serif;
-    font-size: 10rem;
+    font-size: 6rem;
     font-weight: lighter;
     text-transform: uppercase;
     color: var(--accent);
@@ -377,7 +376,7 @@ nav ul li a:hover {
 
 /*style texte/bouton*/
 .apropos-texte {
-    font-size: 2rem;
+    font-size: 1.5rem;
     background-color: #311757;
     padding: 30px;
     margin: 30px;
@@ -541,6 +540,128 @@ nav ul li a:hover {
     }
 }
 
+/*Projets Projets Projets Projets Projets Projets Projets Projets Projets Projets Projets Projets Projets Projets Projets*/
+
+.border-h2 {
+    color: var(--background);
+    -webkit-text-stroke: var(--bg-white);
+    -webkit-text-stroke-width: 3px;
+    font-family: "Anton", serif;
+    font-size: 8rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    margin: 100px 0 0;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+/*display section projet*/
+.projets .center-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*style texte/bouton*/
+.div-projet {
+    font-size: 1.5rem;
+    background-color: #311757;
+    padding: 30px;
+    margin: 30px;
+    color: var(--bg-white);
+    text-align: center;
+    border-radius: 30px;
+    max-width: 80%;
+    display: flex;
+}
+
+.projet-img {
+    text-align: center;
+    margin: auto;
+}
+
+.div-projet img {
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: center;
+}
+
+.projet-texte {
+    max-width: 50%;
+    text-align: left;
+    font-size: 1rem;
+    margin: 10px;
+}
+
+.projet-texte p {
+    margin: 3px; color: #bdbaba;
+}
+
+.technologie {
+    display: flex;
+    align-items: center;
+    margin: 3px;
+}
+
+.technologie i {
+    margin: 5px 0 0 10px;
+}
+
+.bouton-projet a {
+    text-decoration: none;
+}
+
+.bouton-projet button {
+    color: var(--accent);
+    background-color: transparent;
+    padding: 20px;
+    min-width: 150px;
+    border-radius: 50px;
+    margin: 10px;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.bouton-projet button:hover {
+    color: var(--background);
+    background-color: var(--bg-white);
+}
+
+.bouton-projet .live {
+    color: var(--background);
+    background-color: var(--accent);
+    padding: 20px;
+    min-width: 150px;
+    border-radius: 50px;
+    margin: 10px;
+}
+
+.bouton-projet .live:hover {
+    color: var(--accent);
+    background-color: var(--background);
+    padding: 20px;
+    min-width: 150px;
+    border-radius: 50px;
+    margin: 10px;
+}
+
+.fa-html5 {
+    color: #f06529;
+}
+
+.fa-css3 {
+    color: #2965f1;
+}
+
+.fa-bootstrap {
+    color: #563d7c;
+}
+
 /*MédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaas */
 /*Laptop/tablette*/
 @media (max-width: 1024px) {
@@ -551,6 +672,15 @@ nav ul li a:hover {
     nav ul {
         display: none;
     }
+
+    .hero-section h1 {
+        font-size: 4rem;
+    }
+
+    .div-projet {
+        flex-direction: column;
+    }
+
 }
 
 /*tablette*/
