@@ -115,7 +115,7 @@
     </section>
     <!-- Section À propos --> <!-- Section À propos --> <!-- Section À propos --> <!-- Section À propos -->
     <section class="apropos" id="apropos">
-        <h2>à propos</h2>
+        <h2 class="border-h2">à propos</h2>
         <div class="center-div">
             <!--            Partie texte-->
             <div class="apropos-texte">
@@ -144,7 +144,7 @@
                 <!--                mes boutons-->
                 <div class="button-apropos">
 
-                    <a download="cv.txt" href="download/cv.txt">
+                    <a download="cvMoraisPedro.pdf" href="download/cvMoraisPedro.pdf">
                         <button class="color-f04bff">Télécharger CV</button>
                     </a>
                     <a href="#contact">
@@ -163,7 +163,7 @@
     <section class="skills">
         <div>
 
-            <h2>Skills</h2>
+            <h2 class="border-h2">Skills</h2>
         </div>
         <div class="center-div" id="skills">
             <!--CARD HTML-->
@@ -205,18 +205,18 @@
                         <i class="fa-brands fa-css3"></i>
                         <p>CSS</p></div>
                     <div class="bouton-projet">
-                        <a href="https://moraistp.github.io/Inazuma/index.html">
+                        <a href="https://moraistp.github.io/Inazuma/index.html" target="_blank">
                             <button class="live">Voir en LIVE</button>
                         </a>
-                        <a href="https://github.com/MoraisTP/Inazuma">
+                        <a href="https://github.com/MoraisTP/Inazuma" target="_blank">
                             <button>Voir sur Github</button>
                         </a>
                     </div>
                 </div>
                 <div class="projet-img"><img alt="Logo Re:Style" src="./assets/img/restyle.png"></div>
-                </div>
-
             </div>
+
+        </div>
         <div class="center-div">
             <div class="div-projet">
                 <div class="projet-texte">
@@ -225,9 +225,11 @@
                         petite
                         semaine j'ai eu le plaisir de faire connaissance avec des logiciels que je n'avais jamais
                         utilisé et
-                        en plus, je me suis appronfie sur le sujet des IA. <br> Des questions comme "C'est quoi une IA
+                        en plus, je me suis appronfie sur le sujet des IA. </p> <br>
+                    <p> Des questions comme "C'est quoi une IA
                         ?",
-                        "Comment ça marche ?" et "C'est quoi un LLM ?" <br> Suite à cette semaine de rush, j'ai appris a
+                        "Comment ça marche ?" et "C'est quoi un LLM ?"</p>
+                    <p>Suite à cette semaine de rush, j'ai appris a
                         crée des
                         system prompt efficace, comment configurer le logiciel "LM Studio" et j'ai beaucoup appris au
                         sujet
@@ -244,12 +246,12 @@
                         <i class="fa-brands fa-css3"></i>
                         <p>CSS</p>
                         <i class="fa-solid fa-brain"></i>
-                        <p>LLM et Mistral</p></div>
+                        <p>Mistral</p></div>
                     <div class="bouton-projet">
-                        <a href="https://moraistp.github.io/prosit-ai/">
+                        <a href="https://moraistp.github.io/prosit-ai/" target="_blank">
                             <button class="live">Voir en LIVE</button>
                         </a>
-                        <a href="https://github.com/MoraisTP/prosit-ai">
+                        <a href="https://github.com/MoraisTP/prosit-ai" target="_blank">
                             <button>Voir sur Github</button>
                         </a>
                     </div>
@@ -279,10 +281,10 @@
                         <p>Bootstrap</p>
                     </div>
                     <div class="bouton-projet">
-                        <a href="https://kirit076320.github.io/WaveX2.0/">
+                        <a href="https://kirit076320.github.io/WaveX2.0/" target="_blank">
                             <button class="live">Voir en LIVE</button>
                         </a>
-                        <a href="https://github.com/Kirit076320/Cineflix2.0">
+                        <a href="https://github.com/Kirit076320/Cineflix2.0" target="_blank">
                             <button>Voir sur Github</button>
                         </a>
                     </div>
@@ -293,14 +295,28 @@
 
     </section>
     <section class="contact" id="contact">
-        <h2>Contactez-moi</h2>
-        <div class="center-div">
-            <div class="div-contact">
-                <a href="mailto:morais.pedro@outlook.fr"><i class="fa-solid fa-envelope"></i>morais.pedro@outlook.fr</a>
-                <a href="tel:0779562797"><i class="fa-solid fa-mobile-screen-button"></i>07 79 56 27 97</a>
-                <a href="https://www.linkedin.com/in/moraisteixeira/"><i class="fa-brands fa-linkedin"></i>Linkedin</a>
-                <a href="https://github.com/moraistp"><i class="fa-brands fa-github"></i>Github</a>
-            </div>
+        <h2 class="border-h2">Contactez-moi</h2>
+        <div class="cardContact">
+            <a class="socialContainer containerOne" href="mailto:morais.pedro@outlook.fr" target="_blank">
+                <i class="socialSvg instagramSvg fa-solid fa-phone"></i>
+            </a>
+
+            <a class="socialContainer containerTwo" href="tel:0779562797" target="_blank">
+                <i class="socialSvg twitterSvg fa-solid fa-envelope"></i>
+            </a>
+
+            <a class="socialContainer containerThree" href="https://www.linkedin.com/in/moraisteixeira/"
+               target="_blank">
+
+                <i class="socialSvg linkdinSvg fa-brands fa-linkedin-in"></i>
+
+            </a>
+
+            <a class="socialContainer containerFour" href="https://github.com/MoraisTP" target="_blank">
+
+                <i class="socialSvg whatsappSvg fa-brands fa-github"></i>
+
+            </a>
         </div>
     </section>
 </main>
