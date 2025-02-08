@@ -317,12 +317,20 @@ nav ul li a:hover {
     letter-spacing: 5px;
 }
 
+.dark-mode .hero-section p {
+    color: var(--bg-white);
+
+}
+
 .hero-section p {
     margin: 0;
     font-size: 1.5rem;
     text-align: left;
     font-weight: 300;
-    color: var(--bg-white);
+    color: #ffffff;
+    background-color: rgba(50, 50, 93, 0.25);
+    backdrop-filter: blur(2px);
+    padding: 10px;
     margin-top: 40px;
 }
 
