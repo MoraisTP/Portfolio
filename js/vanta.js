@@ -1,4 +1,3 @@
-console.log('alo')
 let darkmode = localStorage.getItem("dark-mode");
 const darkModetoggle = document.getElementById("dark-mode-toggle");
 
@@ -11,8 +10,8 @@ let effect = VANTA.NET({
     minWidth: 200.00,
     scale: 1.00,
     scaleMobile: 1.00,
-    color: 0x0,
-    backgroundColor: darkmode === "active" ? 0x111111 : 0xd3bbf8 // Noir en dark, violet en light
+    color: darkmode === "active" ? 0xfa4381 : 0x0, // Fils roses en dark, noirs en light
+    backgroundColor: darkmode === "active" ? 0x24153e : 0xd3bbf8 // Fond violet foncé en dark, violet clair en light
 });
 
 const enableDarkmode = () => {
@@ -27,9 +26,9 @@ const disableDarkmode = () => {
     updateVantaBackground(false);
 };
 
-// Mise à jour de VANTA.JS avec la bonne couleur
+// Mise à jour de VANTA.JS avec les bonnes couleurs
 const updateVantaBackground = (isDark) => {
-    if (effect) effect.destroy(); // Supprime l'instance actuelle pour éviter les doublons
+    if (effect) effect.destroy();
     effect = VANTA.NET({
         el: "#vantajs",
         mouseControls: true,
@@ -39,8 +38,8 @@ const updateVantaBackground = (isDark) => {
         minWidth: 200.00,
         scale: 1.00,
         scaleMobile: 1.00,
-        color: 0x0,
-        backgroundColor: isDark ? 0x111111 : 0xd3bbf8
+        color: isDark ? 0xfa4381 : 0x0, // Fils roses en dark, noirs en light
+        backgroundColor: isDark ? 0x24153e : 0xa485de // Fond violet foncé en dark, violet clair en light
     });
 };
 
