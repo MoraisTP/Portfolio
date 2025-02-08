@@ -969,16 +969,24 @@ nav ul li a:hover {
         color: #ffffff;
     }
 
+    .hero-photo img {
+        width: 100%;
+        height: auto;
+        max-width: 200px;
+    }
 
-}
+    .hero-text {
+        min-height: 250px;
+    }
 
-/*mobile petite taille*/
-@media (max-width: 320px) {
     .hero-text .typed-text {
         font-size: 1rem;
         color: #ffffff;
     }
 
+    #vantajs {
+        background-color: #2d1b38; /* Couleur de fond avant Vanta */
+    }
 
     .hero-photo {
         position: absolute !important;
@@ -987,6 +995,8 @@ nav ul li a:hover {
     }
 
 }
+
+
 
 
 

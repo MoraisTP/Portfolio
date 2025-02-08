@@ -17,7 +17,7 @@ const initVanta = (isDark) => {
         scaleMobile: 1.00,
         color: isDark ? 0xfa4381 : 0x0, // Fils roses en dark, noirs en light
         backgroundColor: isDark ? 0x24153e : 0xa485de // Fond violet foncé en dark, violet clair en light
-    });
+    }, 1000);
 };
 
 // Fonction pour activer le dark mode
