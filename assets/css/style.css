@@ -5,11 +5,12 @@
     --text: #ffffff;
     --text-complement: #000000;
 
-    --background: #1A0538;
-    --background-complement: #FFD6C7;
-
-    --background2: #6404e3;
-    --background2-complement: #E3D104;
+    --bg: #210d41;
+    --bg-complemebt: #FFD6C7;
+    --backgroundLight: #3b383f;
+    --backgroundDark: #311757;
+    --bg2: #6404e3;
+    --bg2-complement: #E3D104;
 
     --primary: #F04BFF;
     --primary-complement: #4BFF4B;
@@ -49,20 +50,20 @@ body {
     font-family: "Lato", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--bg-white);
+    background-color: #d3bbf8;
     color: var(--bg-black);
     overflow-x: hidden;
 }
 
 /* Mode sombre */
 .dark-mode {
-    background-color: var(--background);
+    background-color: var(--bg);
     color: var(--bg-white);
 }
 
 /* Navbar Mode sombre*/
 .dark-mode nav {
-    background-color: var(--background);
+    background-color: var(--bg);
     border-bottom: #fff 1px solid;
 }
 
@@ -77,6 +78,23 @@ body {
     background-color: var(--primary);
 }
 
+.dark-mode .border-h2 {
+    color: var(--bg);
+    -webkit-text-stroke: var(--bg-white);
+    -webkit-text-stroke-width: 3px;
+}
+
+.dark-mode .div-projet {
+    font-size: 1.5rem;
+    background-color: #311757;
+    padding: 30px;
+    margin: 30px;
+    color: var(--bg-white);
+    text-align: center;
+    border-radius: 30px;
+    max-width: 80%;
+    display: flex;
+}
 
 /*Navbar mode light*/
 nav {
@@ -176,6 +194,10 @@ nav ul li a:hover {
 }
 
 /*Menubar visible en mobile*/
+.dark-mode .menubar {
+    background: rgb(35, 21, 60);
+}
+
 .menubar {
     position: absolute;
     top: 0;
@@ -183,7 +205,7 @@ nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    width: 60%;
+    width: 30%;
     height: 100vh;
     padding: 20% 0;
     background: rgba(255, 255, 255);
@@ -205,6 +227,11 @@ nav ul li a:hover {
     margin-bottom: 32px;
 }
 
+.dark-mode .menubar ul li a {
+    text-decoration: none;
+    color: var(--bg-white);
+}
+
 .menubar ul li a {
     text-decoration: none;
     color: var(--text-complement);
@@ -223,7 +250,7 @@ nav ul li a:hover {
     width: 50px;
     padding: 0;
     border-radius: 50%;
-    background-color: var(--background2-complement);
+    background-color: var(--bg2-complement);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -294,6 +321,7 @@ nav ul li a:hover {
     margin: 0;
     font-size: 1.5rem;
     text-align: left;
+    font-weight: 300;
     color: var(--bg-white);
     margin-top: 40px;
 }
@@ -362,10 +390,15 @@ nav ul li a:hover {
     align-items: center;
 }
 
+.dark-mode .apropos-texte {
+    background-color: #311757;
+}
+
 /*style texte/bouton*/
 .apropos-texte {
     font-size: 1.5rem;
-    background-color: #311757;
+    font-weight: 300;
+    background-color: #3b383f;
     padding: 30px;
     margin: 30px;
     color: var(--bg-white);
@@ -429,8 +462,12 @@ nav ul li a:hover {
 }
 
 /*style du grid/de la div*/
+.dark-mode .center-div .grid {
+    background: var(--bg);
+}
+
 .center-div .grid {
-    background: #311757;
+    background-color: var(--backgroundLight);
     margin-top: 70px;
     padding: 30px;
     border-radius: 10%;
@@ -479,8 +516,8 @@ nav ul li a:hover {
     background-image: conic-gradient(from var(--angle), transparent, #2195f2, #126cb4);
 }
 
-.github::after, .github::before {
-    background-image: conic-gradient(from var(--angle), transparent, #492400, #000000);
+.git::after, .git::before {
+    background-image: conic-gradient(from var(--angle), transparent, #ff940f, #f2511e);
 }
 
 .bootstrap::after, .bootstrap::before {
@@ -493,13 +530,26 @@ nav ul li a:hover {
 
 .photoshop::after, .photoshop::before {
     background-image: conic-gradient(from var(--angle), transparent, #001833, #2eaafd);
+}
 
+.php::after, .php::before {
+    background-image: conic-gradient(from var(--angle), transparent, #889ad2, #7789c7);
+}
+
+.javascript::after, .javascript::before {
+    background-image: conic-gradient(from var(--angle), transparent, #fada3d, #d5ba32);
+}
+
+.construction::after, .construction::before {
+    background-image: conic-gradient(from var(--angle), transparent, #ffffff, #000000);
 }
 
 /* Supprime les débordements de l'anim SI il y en avait*/
 .skills .center-div {
     overflow: hidden;
+
 }
+
 
 .card::before {
     filter: blur(1.5rem);
@@ -519,8 +569,8 @@ nav ul li a:hover {
 /*Projets Projets Projets Projets Projets Projets Projets Projets Projets Projets Projets Projets Projets Projets Projets*/
 
 .border-h2 {
-    color: var(--background);
-    -webkit-text-stroke: var(--bg-white);
+    color: var(--bg-white);
+    -webkit-text-stroke: var(--bg);
     -webkit-text-stroke-width: 3px;
     font-family: "Anton", serif;
     font-size: 10vh;
@@ -528,6 +578,10 @@ nav ul li a:hover {
     text-transform: uppercase;
     text-align: center;
     letter-spacing: 5px;
+}
+
+.contact .border-h2 {
+    font-size: 7vh;
 }
 
 /*display section projet*/
@@ -539,12 +593,14 @@ nav ul li a:hover {
 
 
 /*style texte/bouton*/
+
+
 .div-projet {
     font-size: 1.5rem;
-    background-color: #311757;
+    background-color: #3b383f;
     padding: 30px;
     margin: 30px;
-    color: var(--bg-white);
+    color: #ffffff;
     text-align: center;
     border-radius: 30px;
     max-width: 80%;
@@ -604,12 +660,12 @@ nav ul li a:hover {
 }
 
 .bouton-projet button:hover {
-    color: var(--background);
+    color: var(--bg);
     background-color: var(--bg-white);
 }
 
 .bouton-projet .live {
-    color: var(--background);
+    color: var(--bg);
     background-color: var(--accent);
     padding: 20px;
     min-width: 150px;
@@ -619,7 +675,7 @@ nav ul li a:hover {
 
 .bouton-projet .live:hover {
     color: var(--accent);
-    background-color: var(--background);
+    background-color: var(--bg);
     padding: 20px;
     min-width: 150px;
     border-radius: 50px;
@@ -639,11 +695,13 @@ nav ul li a:hover {
 }
 
 /*Section Contact Section Contact Section Contact Section Contact Section Contact Section Contact Section Contact*/
+.dark-mode .cardContact {
+    background-color: var(--backgroundDark);
+}
 
 .cardContact {
     min-width: fit-content;
-    background-color: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(100%);
+    background-color: var(--backgroundLight);
     border-radius: 15px;
     height: fit-content;
     margin-left: auto;
@@ -658,10 +716,15 @@ nav ul li a:hover {
 }
 
 /* for all social containers*/
+.dark-mode .socialContainer {
+    background-color: rgb(44, 44, 44);
+    color: white;
+}
+
 .socialContainer {
     width: 100px;
     height: 100px;
-    background-color: rgb(44, 44, 44);
+    background-color: rgb(213, 181, 217);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -669,7 +732,7 @@ nav ul li a:hover {
     overflow: hidden;
     transition-duration: 0.3s;
     text-decoration: none;
-    color: white;
+    color: #000000;
     font-size: 1.5rem;
 }
 
@@ -705,6 +768,13 @@ nav ul li a:hover {
     border-radius: 15px;
 }
 
+.containerFive:hover {
+    background-color: #25d366;
+    transition-duration: 0.3s;
+    transform: scale(1.4);
+    border-radius: 15px;
+}
+
 .socialContainer:active {
     transform: scale(0.9);
     transition-duration: 0.3s;
@@ -734,6 +804,32 @@ nav ul li a:hover {
     }
 }
 
+.dark-mode .retournerEnHaut {
+    color: var(--bg-white);
+}
+
+.retournerEnHaut {
+    text-decoration: none;
+    color: #000000;
+    border: var(--backgroundLight) solid 2px;
+    font-size: 2rem;
+    transition: 0.3s ease-in-out;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100%;
+    margin-bottom: 50px;
+}
+
+.retournerEnHaut:hover {
+    color: red;
+    transform: scale(1.2);
+}
+
+.retournerEnHaut:active {
+    color: var(--primary);
+    transform: scale(1.2);
+}
+
 
 /*MédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaas */
 /*Laptop/tablette*/
@@ -751,10 +847,6 @@ nav ul li a:hover {
         flex-direction: column;
     }
 
-}
-
-/*tablette*/
-@media (max-width: 768px) {
     .hero-text {
         width: 80%
     }
@@ -771,10 +863,6 @@ nav ul li a:hover {
         justify-content: start;
     }
 
-    .skills .center-div {
-        grid-template-columns: 1fr 1fr;
-        width: 100%;
-    }
 
     .hero-text h1 {
         font-size: 3rem
@@ -801,6 +889,13 @@ nav ul li a:hover {
     }
 
     .div-projet {
+        flex-direction: column;
+        max-width: 90%;
+        padding: 20px;
+        margin: 15px;
+    }
+
+    .dark-mode .div-projet {
         flex-direction: column;
         max-width: 90%;
         padding: 20px;
@@ -842,6 +937,21 @@ nav ul li a:hover {
         margin: 20px 0;
     }
 
+    .contact .cardContact {
+        flex-wrap: wrap;
+        max-width: 90%;
+        min-width: auto;
+    }
+
+}
+
+/*tablette*/
+@media (max-width: 768px) {
+    .skills .center-div {
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+    }
+
 }
 
 /*mobile*/
@@ -850,6 +960,8 @@ nav ul li a:hover {
         font-size: 1.3rem;
         color: #ffffff;
     }
+
+
 }
 
 /*mobile petite taille*/
