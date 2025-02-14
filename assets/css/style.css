@@ -702,6 +702,14 @@ nav ul li a:hover {
     color: #563d7c;
 }
 
+.fa-php {
+    color: #7277ae;
+}
+
+.fa-square-js {
+    color: #efd71b;
+}
+
 /*Section Contact Section Contact Section Contact Section Contact Section Contact Section Contact Section Contact*/
 .dark-mode .cardContact {
     background-color: var(--backgroundDark);
