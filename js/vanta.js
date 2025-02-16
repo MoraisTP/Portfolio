@@ -1,6 +1,6 @@
 let darkmode = localStorage.getItem("dark-mode");
 
-// Si aucune préférence n'est enregistrée, définir le mode sombre par défaut
+// Si aucune préférence n'est enregistrée, définir le mode sombre par défaut (à l'ouverture du site, le mode sombre doit être par défaut.)
 if (darkmode === null) {
     localStorage.setItem("dark-mode", "active");
     darkmode = "active";
@@ -8,7 +8,7 @@ if (darkmode === null) {
 
 const darkModetoggle = document.getElementById("dark-mode-toggle");
 
-// Fonction pour initialiser VANTA avec les bonnes couleurs
+// Fonction pour initialiser VANTA avec les bonnes couleurs (dark ou white)
 const initVanta = (isDark) => {
     if (window.vantaEffect) {
         window.vantaEffect.destroy();
@@ -22,8 +22,8 @@ const initVanta = (isDark) => {
         minWidth: 200.00,
         scale: 1.00,
         scaleMobile: 1.00,
-        color: isDark ? 0xfa4381 : 0x0, // Fils roses en dark, noirs en light
-        backgroundColor: isDark ? 0x24153e : 0xa485de // Fond violet foncé en dark, violet clair en light
+        color: isDark ? 0xfa4381 : 0x0,
+        backgroundColor: isDark ? 0x24153e : 0xa485de
     }, 1000);
 };
 
