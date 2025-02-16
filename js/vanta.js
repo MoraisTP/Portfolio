@@ -1,4 +1,11 @@
 let darkmode = localStorage.getItem("dark-mode");
+
+// Si aucune préférence n'est enregistrée, définir le mode sombre par défaut
+if (darkmode === null) {
+    localStorage.setItem("dark-mode", "active");
+    darkmode = "active";
+}
+
 const darkModetoggle = document.getElementById("dark-mode-toggle");
 
 // Fonction pour initialiser VANTA avec les bonnes couleurs
