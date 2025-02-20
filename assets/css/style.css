@@ -713,8 +713,8 @@ nav ul li a:hover {
 }
 
 .iconProjet {
-    max-width: 20px;
-    margin: 5px 0 0 10px;
+    max-width: 20px!important;
+    margin: 5px 0 0 10px !important;
 }
 
 /*Section Contact Section Contact Section Contact Section Contact Section Contact Section Contact Section Contact*/
