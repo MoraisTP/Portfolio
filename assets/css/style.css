@@ -411,7 +411,7 @@ nav ul li a:hover {
     margin: 30px;
     color: var(--bg-white);
     width: 70%;
-    text-align: center;
+    text-align: left;
     border-radius: 30px;
 }
 
@@ -553,10 +553,7 @@ nav ul li a:hover {
 }
 
 /* Supprime les débordements de l'anim SI il y en avait*/
-.skills .center-div {
-    overflow: hidden;
 
-}
 
 
 .card::before {
@@ -869,8 +866,8 @@ nav ul li a:hover {
 
     .hero-photo {
         position: absolute !important;
-        bottom: 15%;
-        right: 20%;
+        bottom: 0;
+        right: 10%;
     }
 
     .button-hero {
@@ -975,6 +972,12 @@ nav ul li a:hover {
     .hero-text .typed-text {
         font-size: 1.3rem;
         color: #ffffff;
+    }
+    .center-div .grid {
+        margin-top: 70px;
+        padding: 30px;
+        border-radius: 20%;
+        max-width: 70%;
     }
 
     .hero-photo img {
