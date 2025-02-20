@@ -530,7 +530,7 @@ nav ul li a:hover {
     background-image: conic-gradient(from var(--angle), transparent, #ff940f, #f2511e);
 }
 
-.bootstrap::after, .bootstrap::before {
+.mysql::after, .mysql::before {
     background-image: conic-gradient(from var(--angle), transparent, #6d10ef, #41019f);
 }
 
@@ -710,6 +710,11 @@ nav ul li a:hover {
 
 .fa-square-js {
     color: #efd71b;
+}
+
+.iconProjet {
+    max-width: 20px;
+    margin: 5px 0 0 10px;
 }
 
 /*Section Contact Section Contact Section Contact Section Contact Section Contact Section Contact Section Contact*/
