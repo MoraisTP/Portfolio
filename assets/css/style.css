@@ -617,6 +617,7 @@ nav ul li a:hover {
 .projet-img {
     text-align: center;
     margin: auto;
+    margin-left: 10px;
 }
 
 .div-projet img {
@@ -629,22 +630,23 @@ nav ul li a:hover {
 }
 
 .projet-texte {
-    max-width: 50%;
-    text-align: justify;
+    max-width: 40%;
     font-size: 1rem;
     margin: 10px;
-    hyphens: auto;
 }
 
 .projet-texte p {
     margin: 3px;
     color: #bdbaba;
+    text-align: justify;
+    hyphens: auto;
 }
 
 .technologie {
     display: flex;
     align-items: center;
     margin: 3px;
+    vertical-align: middle;
 }
 
 .technologie i {
@@ -920,11 +922,10 @@ nav ul li a:hover {
 
     .projet-texte {
         max-width: 100%;
-        text-align: justify-all;
         line-height: 1.3;
         font-size: 1rem;
         margin: 20px 0 20px;
-        hyphens: auto;
+
     }
 
     .div-projet img {
@@ -938,6 +939,7 @@ nav ul li a:hover {
         flex-wrap: wrap;
         gap: 5px;
         margin: 20px 0 20px;
+        vertical-align: middle;
     }
 
     .bouton-projet button, .bouton-projet .live {
