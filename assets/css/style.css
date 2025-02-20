@@ -331,6 +331,7 @@ nav ul li a:hover {
     background-color: rgba(50, 50, 93, 0.25);
     backdrop-filter: blur(2px);
     padding: 10px;
+    hyphens: auto;
     margin-top: 40px;
 }
 
