@@ -649,8 +649,15 @@ nav ul li a:hover {
     vertical-align: middle;
 }
 
+.technologieDiv {
+    display: flex;
+    align-items: center;
+    margin: 3px;
+    vertical-align: middle;
+}
+
 .technologie i {
-    margin: 5px 0 0 10px;
+    margin: 5px 2px 0 10px;
 }
 
 .bouton-projet a {
@@ -853,7 +860,6 @@ nav ul li a:hover {
     transform: scale(1.2);
 }
 
-
 /*MédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaas */
 /*Laptop/tablette*/
 @media (max-width: 1024px) {
@@ -1019,6 +1025,16 @@ nav ul li a:hover {
 
 }
 
+@media (max-width: 320px) {
+    .iconProjet {
+        max-width: 20px !important;
+        margin: 5px 0 0 10px !important;
+    }
+
+    .technologie .marginRight {
+        margin-right: 10px;
+    }
+}
 
 
 
