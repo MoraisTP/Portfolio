@@ -764,6 +764,7 @@ nav ul li a:hover {
     text-decoration: none;
     color: #000000;
     font-size: 1.5rem;
+    position: relative;
 }
 
 /* instagram*/
@@ -853,12 +854,22 @@ nav ul li a:hover {
 .retournerEnHaut:hover {
     color: red;
     transform: scale(1.2);
+    background-color: var(--backgroundLight);
 }
 
-.retournerEnHaut:active {
-    color: var(--primary);
-    transform: scale(1.2);
+
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
+
 
 /*MédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaasMédiaaaas */
 /*Laptop/tablette*/
