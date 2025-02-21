@@ -43,7 +43,7 @@ html {
     scroll-behavior: smooth;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
 }
 
 body {
@@ -52,7 +52,7 @@ body {
     padding: 0;
     background-color: #d3bbf8;
     color: var(--bg-black);
-    overflow-x: hidden;
+    /*overflow-x: hidden;*/
 }
 
 /* Mode sombre */
@@ -97,9 +97,13 @@ body {
 }
 
 /*Navbar mode light*/
-nav {
-    position: sticky;
+header {
+    position: sticky !important;
     top: 0;
+    z-index: 10;
+}
+
+nav {
     padding: 5px 5%;
     width: 100%;
     max-height: 70px;
@@ -108,7 +112,6 @@ nav {
     align-items: center;
     box-shadow: rgba(50, 50, 93, 0.25) 0 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0 1px 3px -1px;
-    z-index: 10;
     background-color: var(--bg-white);
 }
 
@@ -284,6 +287,7 @@ nav ul li a:hover {
 
 /* Section MOI Section MOI Section MOI Section MOI Section MOI Section MOI Section MOI Section MOI Section MOI */
 .hero-section {
+    max-height: 100vh;
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -557,7 +561,6 @@ nav ul li a:hover {
 /* Supprime les débordements de l'anim SI il y en avait*/
 
 
-
 .card::before {
     filter: blur(1.5rem);
     opacity: 0.5;
@@ -645,7 +648,7 @@ nav ul li a:hover {
 .technologie {
     display: flex;
     align-items: center;
-    margin: 3px;
+    margin: 15px 0;
     vertical-align: middle;
 }
 
@@ -720,7 +723,7 @@ nav ul li a:hover {
 }
 
 .iconProjet {
-    max-width: 20px!important;
+    max-width: 20px !important;
     margin: 5px 0 0 10px !important;
 }
 
@@ -759,7 +762,7 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    /*overflow: hidden;*/
     transition-duration: 0.3s;
     text-decoration: none;
     color: #000000;
@@ -858,14 +861,13 @@ nav ul li a:hover {
 }
 
 
-
 .sr-only {
     position: absolute;
     width: 1px;
     height: 1px;
     padding: 0;
     margin: -1px;
-    overflow: hidden;
+    /*overflow: hidden;*/
     clip: rect(0, 0, 0, 0);
     border: 0;
 }
@@ -981,7 +983,7 @@ nav ul li a:hover {
 
     .contact .cardContact {
         flex-wrap: wrap;
-        max-width: 90%;
+        /*max-width: 90%;*/
         min-width: auto;
     }
 
@@ -1002,6 +1004,7 @@ nav ul li a:hover {
         font-size: 1.3rem;
         color: #ffffff;
     }
+
     .center-div .grid {
         margin-top: 70px;
         padding: 30px;
